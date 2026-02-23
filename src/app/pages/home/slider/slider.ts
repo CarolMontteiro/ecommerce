@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, input, signal } from '@angular/core';
+
+//Interface
+import { sliderItem } from '../../../models/sliderItem.model';
 
 @Component({
   selector: 'app-slider',
@@ -6,6 +9,11 @@ import { Component } from '@angular/core';
   templateUrl: './slider.html',
   styleUrl: './slider.css',
 })
-export class Slider {
+export class Slider  {
+ 
+  items = input.required<sliderItem[]>();
+
+  public currentIndex = signal(0);
+
 
 }
